@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Grafik/Da Tawa kunst Version 1/Dr_Lukket.png" type="Texture" id=1]
+[ext_resource path="res://Level_change2.gd" type="Script" id=2]
+
+[node name="Level_change2" type="Sprite"]
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PoolVector2Array( 12, -34.7, 17, -33.6, 17, -31.9, 26, -23.9, 26, -19, 28, 34, -28, 34, -28, -18.7, -16, -34, -12, -34, -12, -36, 12, -36 )
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
